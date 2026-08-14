@@ -30,20 +30,28 @@ npm run lint
 
 ## Vercel deployment
 
-Update the placeholders in `website/src/config/site.ts` and the owner decisions listed in `CONTENT_TODO.md` before deploying.
+The Next.js app lives in `website/`. Vercel must use that folder as the project root. Do not keep an install command such as `cd website && npm install`; that fails when Vercel is already inside `website/`.
+
+### Dashboard (recommended)
+
+1. Import this Git repository in Vercel.
+2. Set **Root Directory** to `website`.
+3. Set **Framework Preset** to `Next.js`.
+4. Leave **Install Command**, **Build Command**, and **Output Directory** on their defaults. Do not override them.
+5. Deploy.
+
+If a previous deployment already used custom commands, open **Project Settings → General** and **Build and Deployment**, set the Root Directory to `website`, clear the overridden install/build/output fields, then redeploy.
+
+### CLI
 
 ```bash
 cd website
-npm run build
-# then deploy with Vercel from the repo root
-cd ..
-vercel
+npx vercel
 # or for a production deployment
-vercel --prod
+npx vercel --prod
 ```
 
-You can also import the repository into Vercel through the dashboard and let Vercel detect the `Next.js` project automatically.
-The root `vercel.json` points Vercel at the exported site in `website/out`.
+Update the placeholders in `website/src/config/site.ts` and the owner decisions listed in `CONTENT_TODO.md` before publishing.
 
 ## Notes
 
