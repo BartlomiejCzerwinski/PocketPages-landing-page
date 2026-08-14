@@ -19,7 +19,7 @@ cd website
 npm run build
 ```
 
-The static export is generated in `website/out/`.
+This creates a production Next.js build in `website/.next/`.
 
 ## Linting
 
@@ -32,7 +32,7 @@ npm run lint
 
 The Next.js app lives in `website/`. Commit and push `website/vercel.json` before redeploying.
 
-Because Vercel **Root Directory** is `website`, paths must be relative to that folder. Use `out`, not `website/out`. Using `website/out` makes Vercel look for `website/website/out`.
+Vercel’s Next.js preset needs `.next` (it looks for `routes-manifest.json` there). Do not set Output Directory to `out`.
 
 ### Required dashboard settings
 
@@ -40,8 +40,8 @@ In Vercel, open **Project Settings → General** and **Build and Deployment**:
 
 1. Set **Root Directory** to `website`.
 2. Set **Framework Preset** to `Next.js`.
-3. If **Output Directory** is overridden, set it to `out` or turn the override off.
-4. Turn **off** any leftover **Install Command** / **Build Command** overrides such as `cd website && ...`.
+3. Set **Output Directory** to `.next`, or turn that override off.
+4. Turn **off** leftover **Install Command** / **Build Command** overrides such as `cd website && ...`.
 5. Save, then redeploy the latest Git commit.
 
 ### CLI
@@ -58,5 +58,5 @@ Update the placeholders in `website/src/config/site.ts` and the owner decisions 
 ## Notes
 
 - The repository provided for this task did not include the Android application source code.
-- The website is configured as a static Next.js export and can be deployed on Vercel.
+- The website is a Next.js App Router project configured for Vercel.
 - Do not publish the site until all placeholder legal and business values are replaced with confirmed production values.
