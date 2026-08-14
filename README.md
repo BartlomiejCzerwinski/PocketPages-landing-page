@@ -30,17 +30,18 @@ npm run lint
 
 ## Vercel deployment
 
-The Next.js app lives in `website/`. Vercel must use that folder as the project root. Do not keep an install command such as `cd website && npm install`; that fails when Vercel is already inside `website/`.
+The Next.js app lives in `website/`. Commit and push the `vercel.json` files in this repository before redeploying. Vercel keeps old dashboard commands until they are cleared or overridden by a committed `vercel.json`.
 
-### Dashboard (recommended)
+### Required dashboard settings
 
-1. Import this Git repository in Vercel.
-2. Set **Root Directory** to `website`.
-3. Set **Framework Preset** to `Next.js`.
-4. Leave **Install Command**, **Build Command**, and **Output Directory** on their defaults. Do not override them.
-5. Deploy.
+In Vercel, open **Project Settings → General** and **Build and Deployment**:
 
-If a previous deployment already used custom commands, open **Project Settings → General** and **Build and Deployment**, set the Root Directory to `website`, clear the overridden install/build/output fields, then redeploy.
+1. Set **Root Directory** to `website`.
+2. Set **Framework Preset** to `Next.js`.
+3. Turn **off** the overrides for **Install Command**, **Build Command**, and **Output Directory**.
+4. Save, then redeploy the latest Git commit.
+
+The command `cd website && npm install` must not appear anywhere in the dashboard. It fails because Vercel is already inside `website/`.
 
 ### CLI
 
