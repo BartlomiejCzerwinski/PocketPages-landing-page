@@ -41,7 +41,6 @@ export const ownerConfirmationItems = [
   "Governing law and jurisdiction",
   "Account deletion response time",
   "Minimum age requirement",
-  "Exact in-app account deletion path wording for /delete-account/",
 ] as const;
 
 export const APP_DESCRIPTION =
@@ -87,17 +86,14 @@ export const getSupportEmailHref = (): string =>
     : `mailto:${siteConfig.supportEmail}`;
 
 export const getDeleteAccountMailto = (): string => {
-  const subject = encodeURIComponent(
-    `${siteConfig.appName} account deletion request`,
-  );
+  const subject = encodeURIComponent("Delete my PocketPages account");
   const body = encodeURIComponent(
     [
       `Hello ${siteConfig.developerDisplayName},`,
       "",
-      "I would like to request deletion of my PocketPages account.",
+      "I would like to request deletion of my PocketPages account and associated data.",
       "Google email associated with the account:",
       "",
-      "Please let me know if you need any additional verification to complete this request.",
     ].join("\n"),
   );
 

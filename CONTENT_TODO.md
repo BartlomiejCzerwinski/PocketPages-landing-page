@@ -24,7 +24,6 @@ Replace every placeholder below before publishing or deploying the production si
 ## Owner confirmation still required
 
 - Confirm the public website domain before enabling canonical URLs, sitemap URLs, and final social metadata
-- Confirm the exact in-app account deletion path wording for `/delete-account/`
 - Confirm Terms of Service effective date, governing law, minimum age, and account-deletion response time
 - Confirm any final subscription/usage-limit wording shown in the FAQ and support pages
 
