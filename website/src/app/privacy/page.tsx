@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/metadata";
 export const metadata = buildMetadata({
   title: `Privacy Policy | ${siteConfig.appName}`,
   description:
-    "Read how PocketPages handles account data, scanned page images, extracted text, subscriptions, analytics, and service providers.",
+    "Read how PocketPages handles account data, scanned page images, extracted text, subscriptions, and service providers.",
   path: "/privacy/",
 });
 
@@ -23,6 +23,9 @@ export default function PrivacyPage() {
           <br />
           <strong className="text-[var(--ink)]">Last updated:</strong>{" "}
           {siteConfig.privacyEffectiveDate}
+          <br />
+          <strong className="text-[var(--ink)]">Document revision:</strong>{" "}
+          {siteConfig.legalDocumentRevision}
         </p>
         <p className="mt-4 text-lg leading-8 text-[color:var(--muted-ink)]">
           PocketPages (the <strong className="text-[var(--ink)]">“App”</strong>)
@@ -137,42 +140,7 @@ export default function PrivacyPage() {
             privacy policy.
           </p>
 
-          <h3>3.4 Analytics and technical data</h3>
-          <p>
-            PocketPages uses Google Analytics for Firebase to understand how the
-            App is used and to improve its reliability and usability. Depending
-            on the device and App configuration, this may include:
-          </p>
-          <ul>
-            <li>
-              App interactions and events, such as first launch, screen views,
-              feature use, and session duration;
-            </li>
-            <li>
-              App version, operating system, device model, language, and general
-              device information;
-            </li>
-            <li>
-              approximate geographic information, such as country or city,
-              derived by Google from technical information;
-            </li>
-            <li>
-              an App-instance identifier and, depending on device settings and
-              configuration, device or advertising identifiers; and
-            </li>
-            <li>
-              in-app purchase events reported through Firebase Analytics.
-            </li>
-          </ul>
-          <p>
-            We do not use Firebase Analytics data to show advertising in
-            PocketPages. Where required by applicable law, analytics collection
-            is enabled only after you provide consent. You may withdraw that
-            consent in the App’s privacy settings, without affecting processing
-            that occurred before withdrawal.
-          </p>
-
-          <h3>3.5 Communications</h3>
+          <h3>3.4 Communications</h3>
           <p>
             If you contact us, we process your email address, the content of
             your message, and any information you choose to provide so that we
@@ -208,9 +176,7 @@ export default function PrivacyPage() {
                     Capture pages, extract text, and maintain your document
                     library
                   </td>
-                  <td>
-                    Page images, extracted text, and document metadata
-                  </td>
+                  <td>Page images, extracted text, and document metadata</td>
                   <td>
                     Performance of a contract and steps taken at your request
                   </td>
@@ -224,14 +190,6 @@ export default function PrivacyPage() {
                   </td>
                 </tr>
                 <tr>
-                  <td>Measure App usage and improve features</td>
-                  <td>Analytics and technical data</td>
-                  <td>
-                    Your consent where required by law; otherwise our legitimate
-                    interest in improving the App
-                  </td>
-                </tr>
-                <tr>
                   <td>Respond to support and privacy requests</td>
                   <td>Contact and request information</td>
                   <td>
@@ -241,12 +199,8 @@ export default function PrivacyPage() {
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    Protect PocketPages, users, and service providers
-                  </td>
-                  <td>
-                    Account, technical, security, and transaction data
-                  </td>
+                  <td>Protect PocketPages, users, and service providers</td>
+                  <td>Account, technical, security, and transaction data</td>
                   <td>
                     Our legitimate interests in security, fraud prevention, and
                     establishing or defending legal claims
@@ -256,10 +210,8 @@ export default function PrivacyPage() {
             </table>
           </div>
           <p>
-            Where processing is based on consent, you may withdraw your consent
-            at any time. Where processing is based on legitimate interests, you
-            may object to that processing in the circumstances provided by
-            applicable law.
+            Where processing is based on legitimate interests, you may object to
+            that processing in the circumstances provided by applicable law.
           </p>
 
           <h2>5. AI-assisted text extraction</h2>
@@ -324,20 +276,18 @@ export default function PrivacyPage() {
                   </td>
                   <td>
                     Authentication, database, cloud functions, temporary file
-                    storage, hosting, security, and analytics
+                    storage, hosting, and security
                   </td>
                   <td>
                     Account data, document data, temporary page images,
-                    technical data, analytics data, and IP addresses
+                    authentication-related technical data, and IP addresses
                   </td>
                 </tr>
                 <tr>
                   <td>
                     <strong>OpenAI, L.L.C.</strong>
                   </td>
-                  <td>
-                    AI-assisted extraction of text from page images
-                  </td>
+                  <td>AI-assisted extraction of text from page images</td>
                   <td>
                     Uploaded page images, processing instructions, extracted
                     text, and related technical metadata
@@ -498,13 +448,6 @@ export default function PrivacyPage() {
                   </td>
                 </tr>
                 <tr>
-                  <td>Firebase Analytics user-level and event data</td>
-                  <td>
-                    For up to 14 months. Aggregated reports that no longer
-                    identify an individual user may be retained for longer.
-                  </td>
-                </tr>
-                <tr>
                   <td>Support correspondence</td>
                   <td>
                     For as long as needed to resolve the request and, where
@@ -597,10 +540,6 @@ export default function PrivacyPage() {
             </li>
             <li>object to processing based on legitimate interests;</li>
             <li>
-              withdraw consent at any time where processing is based on consent;
-              and
-            </li>
-            <li>
               lodge a complaint with a competent data-protection authority.
             </li>
           </ul>
@@ -641,12 +580,13 @@ export default function PrivacyPage() {
 
           <h2>13. Children</h2>
           <p>
-            PocketPages is not directed to children under 13, or a higher
-            minimum age where required by local law. We do not knowingly collect
-            personal data from children below the applicable minimum age. If you
-            believe that a child has provided personal data to PocketPages in
-            violation of this section, contact us so that we can investigate and
-            delete it where appropriate.
+            PocketPages is not directed to children under{" "}
+            {siteConfig.minimumAge}, or a higher minimum age where required by
+            local law. We do not knowingly collect personal data from children
+            below the applicable minimum age. If you believe that a child has
+            provided personal data to PocketPages in violation of this section,
+            contact us so that we can investigate and delete it where
+            appropriate.
           </p>
 
           <h2>14. Changes to this Privacy Policy</h2>

@@ -10,14 +10,14 @@ export type SiteConfig = {
   governingLaw: string;
   accountDeletionResponseTime: string;
   minimumAge: string;
+  freePlanMonthlyPages: number;
+  proPlanMonthlyPages: number;
+  maxPagesPerDocument: number;
+  legalDocumentRevision: number;
 };
 
 const TODO = {
   siteUrl: "TODO_SITE_URL",
-  termsEffectiveDate: "TODO_TERMS_EFFECTIVE_DATE",
-  governingLaw: "TODO_GOVERNING_LAW",
-  accountDeletionResponseTime: "TODO_ACCOUNT_DELETION_RESPONSE_TIME",
-  minimumAge: "TODO_MINIMUM_AGE",
 } as const;
 
 export const siteConfig = {
@@ -28,19 +28,20 @@ export const siteConfig = {
   siteUrl: TODO.siteUrl,
   googlePlayUrl: null,
   privacyEffectiveDate: "August 16, 2026",
-  termsEffectiveDate: TODO.termsEffectiveDate,
-  governingLaw: TODO.governingLaw,
-  accountDeletionResponseTime: TODO.accountDeletionResponseTime,
-  minimumAge: TODO.minimumAge,
+  termsEffectiveDate: "August 16, 2026",
+  governingLaw: "Poland",
+  accountDeletionResponseTime:
+    "without undue delay and within the period required by applicable law",
+  minimumAge: "13",
+  freePlanMonthlyPages: 5,
+  proPlanMonthlyPages: 200,
+  maxPagesPerDocument: 20,
+  legalDocumentRevision: 3,
 } as const satisfies SiteConfig;
 
 export const ownerConfirmationItems = [
   "Public website URL",
   "Google Play listing URL",
-  "Terms of Service effective date",
-  "Governing law and jurisdiction",
-  "Account deletion response time",
-  "Minimum age requirement",
 ] as const;
 
 export const APP_DESCRIPTION =

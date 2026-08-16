@@ -73,7 +73,7 @@ const faqs: ReadonlyArray<FaqItem> = [
   {
     question: "How do subscriptions work?",
     answer:
-      "PocketPages subscriptions are handled through Google Play Billing, with subscription status managed through RevenueCat. Free and paid functionality, usage limits, and pricing should be confirmed directly in the app or Play listing.",
+      "PocketPages subscriptions are handled through Google Play Billing, with subscription status managed through RevenueCat. As of the current Terms, the Free plan includes up to 5 processed pages per monthly usage period and the Pro plan includes up to 200 processed pages per monthly usage period. Exact prices are shown in Google Play at purchase.",
   },
   {
     question: "How do I cancel a Google Play subscription?",
@@ -85,14 +85,14 @@ const faqs: ReadonlyArray<FaqItem> = [
   {
     question: "How do I delete my PocketPages account?",
     answer:
-      "Use the delete-account instructions on the dedicated account deletion page. That page includes both the in-app route placeholder that still needs source-code confirmation and an email-based deletion request option.",
+      "Use the dedicated Delete Account page for the email-based deletion request and related guidance.",
     href: "/delete-account/",
     hrefLabel: "Go to Delete Account",
   },
   {
     question: "How can I contact support?",
     answer:
-      "PocketPages support is handled by email. The production support address still needs owner confirmation before launch and is listed on the support page.",
+      "Email PocketPages support at pocketpages@hotmail.com. More help topics are available on the Support page.",
     href: "/support/",
     hrefLabel: "Open Support",
   },

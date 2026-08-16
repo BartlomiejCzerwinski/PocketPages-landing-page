@@ -53,7 +53,9 @@ npx vercel
 npx vercel --prod
 ```
 
-Update the placeholders in `website/src/config/site.ts` and the owner decisions listed in `CONTENT_TODO.md` before publishing.
+Update the remaining placeholders in `website/src/config/site.ts` and the owner decisions listed in `CONTENT_TODO.md` before publishing.
+
+Canonical Privacy Policy and Terms of Service source files live in `legal/` (currently revision 3).
 
 ## Notes
 
