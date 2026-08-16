@@ -24,7 +24,7 @@ export default function PrivacyPage() {
           <strong className="text-[var(--ink)]">Last updated:</strong>{" "}
           {siteConfig.privacyEffectiveDate}
           <br />
-          <strong className="text-[var(--ink)]">Document revision:</strong>{" "}
+          <strong className="text-[var(--ink)]">Document version:</strong>{" "}
           {siteConfig.legalDocumentRevision}
         </p>
         <p className="mt-4 text-lg leading-8 text-[color:var(--muted-ink)]">
