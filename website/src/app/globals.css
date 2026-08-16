@@ -139,13 +139,53 @@ img {
   line-height: 1.85;
 }
 
-.prose-legal ul {
+.prose-legal ul,
+.prose-legal ol {
   padding-left: 1.25rem;
+}
+
+.prose-legal ul {
   list-style: disc;
+}
+
+.prose-legal ol {
+  list-style: decimal;
 }
 
 .prose-legal strong {
   color: var(--ink);
+}
+
+.prose-legal a {
+  color: var(--gold-strong);
+}
+
+.prose-legal .table-wrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.prose-legal table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.prose-legal th,
+.prose-legal td {
+  border: 1px solid var(--line);
+  padding: 0.85rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  color: var(--muted-ink);
+  line-height: 1.6;
+}
+
+.prose-legal th {
+  background: rgba(188, 150, 90, 0.1);
+  color: var(--ink);
+  font-weight: 700;
 }
 
 @media (prefers-reduced-motion: reduce) {

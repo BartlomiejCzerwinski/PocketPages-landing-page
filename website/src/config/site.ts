@@ -13,11 +13,7 @@ export type SiteConfig = {
 };
 
 const TODO = {
-  developerDisplayName: "TODO_DEVELOPER_DISPLAY_NAME",
-  developerLegalName: "TODO_DEVELOPER_LEGAL_NAME",
-  supportEmail: "TODO_SUPPORT_EMAIL",
   siteUrl: "TODO_SITE_URL",
-  privacyEffectiveDate: "TODO_PRIVACY_EFFECTIVE_DATE",
   termsEffectiveDate: "TODO_TERMS_EFFECTIVE_DATE",
   governingLaw: "TODO_GOVERNING_LAW",
   accountDeletionResponseTime: "TODO_ACCOUNT_DELETION_RESPONSE_TIME",
@@ -26,12 +22,12 @@ const TODO = {
 
 export const siteConfig = {
   appName: "PocketPages",
-  developerDisplayName: TODO.developerDisplayName,
-  developerLegalName: TODO.developerLegalName,
-  supportEmail: TODO.supportEmail,
+  developerDisplayName: "Bartłomiej Czerwiński",
+  developerLegalName: "Bartłomiej Czerwiński",
+  supportEmail: "pocketpages@hotmail.com",
   siteUrl: TODO.siteUrl,
   googlePlayUrl: null,
-  privacyEffectiveDate: TODO.privacyEffectiveDate,
+  privacyEffectiveDate: "August 16, 2026",
   termsEffectiveDate: TODO.termsEffectiveDate,
   governingLaw: TODO.governingLaw,
   accountDeletionResponseTime: TODO.accountDeletionResponseTime,
@@ -39,20 +35,13 @@ export const siteConfig = {
 } as const satisfies SiteConfig;
 
 export const ownerConfirmationItems = [
-  "Developer display name",
-  "Developer legal name",
-  "Support email",
   "Public website URL",
   "Google Play listing URL",
-  "Privacy Policy effective date",
   "Terms of Service effective date",
   "Governing law and jurisdiction",
   "Account deletion response time",
   "Minimum age requirement",
-  "Exact in-app account deletion path",
-  "Whether optional diagnostics, crash reports, or installation identifiers are collected in production",
-  "Whether account deletion also removes linked RevenueCat customer data",
-  "Whether PocketPages-managed temporary processing images are deleted immediately after processing in all production flows",
+  "Exact in-app account deletion path wording for /delete-account/",
 ] as const;
 
 export const APP_DESCRIPTION =
